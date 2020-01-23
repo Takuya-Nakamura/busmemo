@@ -1,0 +1,29 @@
+<% if !notice.blank? %>
+<div class='notice'>
+  <p id="notice"><%= notice %></p>
+</div>
+<% end %>
+<ul class='post__list'>
+  <% @posts.each do |post| %>
+  <li class='post_list--cell'>
+    <a href='/posts/<%= post.id %>'>
+      <Img class='cell--image' src='https://placehold.jp/150x150.png'>
+      <div> <%= post.prefecture %></div>
+      <div class='cell--title'><%= post.field %></div>
+      <div> <%= post.point %></div>
+      <div> <%= post.went_at.strftime('%Y-%m-%d') %></div>
+    </a>
+    <%
+=begin%>
+    <div>
+      <%= link_to 'Show', post %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <%
+=end%>
+  </li>
+  <% end %>
+</ul>
+<div class='clear'></div>
+<%= link_to 'New Post', new_post_path %>

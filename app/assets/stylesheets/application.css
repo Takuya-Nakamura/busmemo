@@ -1,0 +1,198 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* body {
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体',
+    'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN',
+    'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック',
+    'MS PGothic', sans-serif;
+} */
+
+/* @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+} */
+body {
+  font-family: 'M PLUS Rounded 1c';
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***********/
+/* Layout  */
+/***********/
+.header {
+  height: 100px;
+  background-color: #059fff;
+  display: flex; /* flexbox*/
+}
+
+.header--item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /*折返ししない*/
+  align-self: stretch;
+
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header-item--full {
+  /*center*/
+  flex: auto;
+  justify-content: center;
+}
+
+.logo__text {
+  color: white;
+  width: 150px;
+  margin: 0 auto;
+  font-size: 200%;
+  /* font-family: 'Righteous', cursive; */
+  font-family: 'Bangers', cursive;
+  /* float: left; */
+}
+
+/***********/
+/* Login  icon 
+/***********/
+.login--form {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login--icon {
+  color: white;
+  font-size: 150%;
+}
+
+.main {
+  /* background-color: #ddd; */
+  /*左右中央寄せ 1*/
+  max-width: 720px;
+  /*左右中央寄せ 2*/
+  margin: 0 auto;
+
+  padding: 30px;
+}
+
+.contents {
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* border: solid 1px; */
+}
+
+/* .button {
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+} */
+
+.footer {
+  height: 100px;
+  padding-top: 25px;
+  background-color: #059fff;
+}
+
+.clear {
+  clear: both;
+}
+
+/***********/
+/* TopPage  
+/***********/
+.notice {
+  margin: 10px;
+  padding: 10px;
+  background-color: azure;
+}
+.post__list {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.post_list--cell {
+  float: left;
+  background-color: white;
+  /* border: 1px solid #666; */
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  /* width: 200px;*/
+  height: 300px;
+  margin: 10px;
+}
+
+.cell--image {
+  margin: 0 auto;
+  /*左右中央寄せ*/
+  width: 100%;
+}
+
+.cell--title {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.cell--text {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+/***********/
+/* Form  
+/***********/
+
+.form__item {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  font-weight: bold;
+}
+
+.form__text {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 150%;
+  width: 100%;
+}
+
+.form__wentat {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 150%;
+  width: 50%;
+}
+.form__prefecture {
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  font-size: 150%;
+  width: 50%;
+}
