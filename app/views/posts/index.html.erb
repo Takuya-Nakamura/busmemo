@@ -2,14 +2,15 @@
 <div class='notice'>
   <p id="notice"><%= notice %></p>
 </div>
+
 <% end %>
-<ul class='post__list'>
+<ul class='post-list'>
   <% @posts.each do |post| %>
-  <li class='post_list--cell'>
+  <li class='post-list__cell'>
     <a href='/posts/<%= post.id %>'>
-      <Img class='cell--image' src='https://placehold.jp/150x150.png'>
+      <Img class='post-list__cell__image' src='https://placehold.jp/150x150.png'>
       <div> <%= post.prefecture %></div>
-      <div class='cell--title'><%= post.field %></div>
+      <div class='post-list__cell__title'><%= post.field %></div>
       <div> <%= post.point %></div>
       <div> <%= post.went_at.strftime('%Y-%m-%d') %></div>
     </a>

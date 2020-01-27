@@ -25,6 +25,15 @@
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 } */
+
+/*
+  基本はBEMでネーミングしていくけど、明らかに使い回せる定義はBEMの限りではない。
+*/
+
+/************/
+/*   Base   */
+/************/
+
 body {
   font-family: 'M PLUS Rounded 1c';
   background-color: #fff;
@@ -34,32 +43,15 @@ a {
   text-decoration: none;
 }
 
-/***********/
-/* Layout  */
-/***********/
-.header {
-  height: 100px;
-  background-color: #059fff;
-  display: flex; /* flexbox*/
+.clear {
+  clear: both;
 }
 
-.header--item {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap; /*折返ししない*/
-  align-self: stretch;
-
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.header-item--full {
-  /*center*/
-  flex: auto;
-  justify-content: center;
-}
-
-.logo__text {
+/**************/
+/* Component  */
+/**************/
+/* logo */
+.logo-text {
   color: white;
   width: 150px;
   margin: 0 auto;
@@ -69,20 +61,47 @@ a {
   /* float: left; */
 }
 
-/***********/
-/* Login  icon 
-/***********/
-.login--form {
+/* login */
+.login-icon {
+  color: white;
+  font-size: 150%;
+}
+
+.login-form {
   width: 350px;
   margin: 0 auto;
   text-align: center;
 }
 
-.login--icon {
-  color: white;
-  font-size: 150%;
+/***********/
+/* BEM  */
+/***********/
+/* header */
+.header {
+  height: 100px;
+  background-color: #059fff;
+  display: flex;
+  /* flexbox*/
 }
 
+.header__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  /*折返ししない*/
+  align-self: stretch;
+
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header__item--full {
+  /*center*/
+  flex: auto;
+  justify-content: center;
+}
+
+/* main */
 .main {
   /* background-color: #ddd; */
   /*左右中央寄せ 1*/
@@ -103,22 +122,11 @@ a {
   /* border: solid 1px; */
 }
 
-/* .button {
-  border-radius: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-} */
-
+/* footer */
 .footer {
   height: 100px;
   padding-top: 25px;
   background-color: #059fff;
-}
-
-.clear {
-  clear: both;
 }
 
 /***********/
@@ -129,12 +137,13 @@ a {
   padding: 10px;
   background-color: azure;
 }
-.post__list {
+
+.post-list {
   list-style: none;
   margin-top: 50px;
 }
 
-.post_list--cell {
+.post-list__cell {
   float: left;
   background-color: white;
   /* border: 1px solid #666; */
@@ -147,24 +156,19 @@ a {
   margin: 10px;
 }
 
-.cell--image {
+.post-list__cell__image {
   margin: 0 auto;
   /*左右中央寄せ*/
   width: 100%;
 }
 
-.cell--title {
-  font-weight: bold;
-  font-size: 150%;
-}
-
-.cell--text {
+.post-list__cell__title {
   font-weight: bold;
   font-size: 150%;
 }
 
 /***********/
-/* Form  
+/* Form (Users)
 /***********/
 
 .form__item {
@@ -188,6 +192,7 @@ a {
   font-size: 150%;
   width: 50%;
 }
+
 .form__prefecture {
   padding: 5px;
   padding-top: 10px;
